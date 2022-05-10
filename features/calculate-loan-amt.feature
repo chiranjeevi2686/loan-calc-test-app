@@ -1,5 +1,5 @@
 Feature: Landing page - calculate loan amount
-
+  @sit
   Scenario Outline: Calculate estimated loan amount
     Given User launched loan calculator page
     And User enter details "<appType>", "<dependends>" and "<propertyType>"

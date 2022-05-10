@@ -20,7 +20,7 @@
     "url": "https://github.com/chiranjeevi2686/loan-calc-test-app.git"
   },
   "scripts": {
-    "ui-tests": "cucumber-js --parallel 1 -f json:report/report.json && node report.js && cat report/report.json | npx cucumber-junit > report/junitreport.xml",
+    "ui-tests": "cucumber-js --parallel 1 --tags=@sit -f json:report/report.json && node report/cucumber-report.js",
     "generate-html-report": "node report/cucumber-report.js"
 
   },

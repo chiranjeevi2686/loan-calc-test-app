@@ -1,5 +1,5 @@
 Feature: Landing page - reset values
-
+  @sit
   Scenario Outline: Calculate estimated loan amount and reset values
     Given User launched loan calculator page
     And User enter details "<appType>", "<dependends>" and "<propertyType>"

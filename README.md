@@ -1,6 +1,9 @@
 # loan-calc-test-app
 mortgage loan calculator testing app
 
+# additional info
+This repo is built to test ui web application using cucumber framework and Playwright library, chai is used for test assertions.
+
 # pre requisite
 node and yarn to be installed
 
@@ -15,3 +18,4 @@ node and yarn to be installed
 # links
 - for reports (report/cucumber_report.html)
 - for video recordings (videos/Calculate estimated loan amount, videos/Calculate estimated loan amount and reset values)
+

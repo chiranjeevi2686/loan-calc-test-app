@@ -25,7 +25,7 @@ Given('User clicks calculate button', async () => {
     await landingpage.calculate();
 });
 
-Then('Verify estimated borrowing amount is ${string}', async (estimatedAmt) => {
+Then('Verify estimated borrowing amount is {string}', async (estimatedAmt) => {
     await landingpage.verifyEstimatedAmt(estimatedAmt);
     
 });

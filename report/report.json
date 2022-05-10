@@ -1,0 +1,248 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "landing-page---reset-values;calculate-estimated-loan-amount-and-reset-values",
+        "keyword": "Scenario Outline",
+        "line": 3,
+        "name": "Calculate estimated loan amount and reset values",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 626000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User launched loan calculator page",
+            "match": {
+              "location": "features/support/steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3581000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "User enter details \"Single\", \"3\" and \"Home to live in\"",
+            "match": {
+              "location": "features/support/steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 514000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "User enter earnings \"100000\" and \"10000\"",
+            "match": {
+              "location": "features/support/steps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 102000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "User enter expenses \"700\", \"0\", \"300\", \"0\", \"20000\"",
+            "match": {
+              "location": "features/support/steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 279000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "User clicks calculate button",
+            "match": {
+              "location": "features/support/steps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 194000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "User clicks startOver button",
+            "match": {
+              "location": "features/support/steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 266000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "Verify all the fields are reset to default",
+            "match": {
+              "location": "features/support/steps.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 177000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 85000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "landing-page---reset-values",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Landing page - reset values",
+    "tags": [],
+    "uri": "features/calculate-loan-amt-reset.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "landing-page---calculate-loan-amount;calculate-estimated-loan-amount",
+        "keyword": "Scenario Outline",
+        "line": 3,
+        "name": "Calculate estimated loan amount",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 329000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User launched loan calculator page",
+            "match": {
+              "location": "features/support/steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3213000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "User enter details \"Single\", \"0\" and \"Home to live in\"",
+            "match": {
+              "location": "features/support/steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 342000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "User enter earnings \"80000\" and \"10000\"",
+            "match": {
+              "location": "features/support/steps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 75000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "User enter expenses \"500\", \"0\", \"100\", \"0\", \"10000\"",
+            "match": {
+              "location": "features/support/steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 199000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "User clicks calculate button",
+            "match": {
+              "location": "features/support/steps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 147000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "Verify estimated borrowing amount is \"$482,000\"",
+            "match": {
+              "location": "features/support/steps.js:28"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 2024000000,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -$542,000\n    +$482,000\n\n    at LandingPage.verifyEstimatedAmt (/Users/kumarnetyam/Workspace/loan-calc-test-app/page_object/landing.page.js:45:29)\n    at runMicrotasks (<anonymous>)\n    at runNextTicks (internal/process/task_queues.js:62:5)\n    at processImmediate (internal/timers.js:429:9)\n    at async World.<anonymous> (/Users/kumarnetyam/Workspace/loan-calc-test-app/features/support/steps.js:29:5)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "landing-page---calculate-loan-amount",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Landing page - calculate loan amount",
+    "tags": [],
+    "uri": "features/calculate-loan-amt.feature"
+  }
+]

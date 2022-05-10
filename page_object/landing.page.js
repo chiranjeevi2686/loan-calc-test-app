@@ -35,6 +35,12 @@ class LandingPage {
     }
 
     async verifyEstimatedAmt(expectedValue) {
+
+     await page.waitForLoadState();
+     //TODO: Not ideal to use hard wait, however there seems to be an issue with waitForLoadState method
+     //on the app and need further analysis to find correct load state and remove hard wait
+     await page.waitForTimeout(2000);
+
      const actualValue = await page.$eval(constants.textSelectors.estimatedAmt, (el) => el.innerText);
      expect(actualValue).to.equal(expectedValue)
     }
@@ -44,6 +50,17 @@ class LandingPage {
     }
 
     async verifyReset() {
+
+        const livingExp = await page.$eval(constants.clientExpensesSelectors.livingExp, (el) => el.value);
+        const hlRepayments = await page.$eval(constants.clientExpensesSelectors.hlRepayments, (el) => el.value);
+        const creditCard = await page.$eval(constants.clientExpensesSelectors.creditCard, (el) => el.value);
+
+        expect(livingExp).to.equal('0')
+        expect(hlRepayments).to.equal('0')
+        expect(creditCard).to.equal('0')
+
+        //TODO: annualIncome, otherIncome, olRepayments has data id issues, once proper data id's are added to app code 
+        // those can be included in the assertions
 
        }
 }
